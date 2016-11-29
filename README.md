@@ -5,7 +5,7 @@
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 `reflay`: **React Flexbox Layout** is a set of [React](https://facebook.github.io/react) components that implements 
-CSS3 [Flexbox](http://www.w3.org/TR/css3-flexbox/) inspired by the awesome 
+CSS3 [Flexbox](http://www.w3.org/TR/css3-flexbox/) and are inspired by the awesome 
 [Angular Material](https://material.angularjs.org/latest/layout/introduction) library. It's built with ES6, SASS 
 and WebPack and provides sugar to enable developers to more easily create modern, responsive layouts on top of 
 CSS3 [Flexbox](http://www.w3.org/TR/css3-flexbox/).

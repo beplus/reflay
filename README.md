@@ -18,7 +18,7 @@ styling.
 - _TODO_ Example usage: [https://github.com/beplus/reflay-example](https://github.com/beplus/reflay-example)
 
 ## Usage
-The recommended way to use the library is to integrate it to your WebPack worlflow with 
+The recommended way to use the library is to integrate it to your WebPack workflow with 
 [Babel Loader](https://github.com/babel/babel-loader), [CSS Loader](https://github.com/webpack/css-loader) and
 [SASS Loader](https://github.com/jtangelder/sass-loader). A good starting point is 
 [reflay-example](https://github.com/beplus/reflay-example).

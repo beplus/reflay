@@ -79,6 +79,14 @@ describe('Layout', () => {
     expect(className).toContain('layout-column')
   })
 
+  it('Should preserve inline style', () => {
+    let styleToApply = {height: '100%'}
+    renderer.render(<Layout direction='column' style={styleToApply} />)
+    const { className, style } = renderer.getRenderOutput().props
+    expect(className).toContain('layout-column')
+    expect(style).toEqual(styleToApply)
+  })
+
   it('Should support custom tag name', () => {
     renderer.render(<Layout direction='column' align='start stretch' tagName='span' />)
 

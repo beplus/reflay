@@ -42,6 +42,8 @@ Once you have the WebPack workflow ready, you can just require and use the compo
 import React from 'react'
 import { Layout, Box } from 'reflay/lib'
  
+import 'reflay/lib/styles/layout' 
+ 
 React.render(<Layout direction='column' />, document.querySelector('#root'))
 ```
 

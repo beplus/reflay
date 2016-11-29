@@ -5,9 +5,6 @@
 [![Build Status](https://travis-ci.org/beplus/reflay.svg)](https://travis-ci.org/beplus/reflay)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![bitHound Overall Score](https://www.bithound.io/github/beplus/reflay/badges/score.svg)](https://www.bithound.io/github/beplus/reflay)
-[![bitHound Code](https://www.bithound.io/github/beplus/reflay/badges/code.svg)](https://www.bithound.io/github/beplus/reflay)
-[![bitHound Dependencies](https://www.bithound.io/github/beplus/reflay/badges/dependencies.svg)](https://www.bithound.io/github/beplus/reflay/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/beplus/reflay/badges/devDependencies.svg)](https://www.bithound.io/github/beplus/reflay/master/dependencies/npm)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 `reflay`: **React Flexbox Layout** is a set of [React](https://facebook.github.io/react) components that implements 

@@ -42,7 +42,7 @@ import { Layout, Box } from 'reflay/lib'
 React.render(<Layout direction='column' />, document.querySelector('#root'))
 ```
 
-## Examples
+## Code Snippets
 - _TODO_
 
 ## API

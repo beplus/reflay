@@ -62,7 +62,7 @@ if (process.env.TRAVIS) {
   config.multiCapabilities = [{
     'name': `reflay #${process.env.TRAVIS_BUILD_NUMBER}: MS EDGE v13.10586 on Windows 10`,
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'build': `${process.env.TRAVIS_BUILD_NUMBER}`,
     'platform': 'Windows 10',
     'browserName': 'MicrosoftEdge',
     'version': '13.10586',
@@ -70,7 +70,7 @@ if (process.env.TRAVIS) {
   }, {
     'name': `reflay #${process.env.TRAVIS_BUILD_NUMBER}: Safari v10.0 on OS X 10.11`,
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'build': `${process.env.TRAVIS_BUILD_NUMBER}`,
     'platform': 'OS X 10.11',
     'browserName': 'safari',
     'version': '10.0',

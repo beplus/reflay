@@ -57,14 +57,24 @@ var config = {
 if (process.env.TRAVIS) {
   config.sauceUser = process.env.SAUCE_USERNAME
   config.sauceKey = process.env.SAUCE_ACCESS_KEY
-  config.capabilities = {
-    'name': 'reflay E2E node v' + process.env.TRAVIS_NODE_VERSION,
-    'browserName': 'chrome',
-    'seleniumVersion': '2.48.2',
-    'chromedriverVersion': '2.20',
+
+  config.multiCapabilities = [{
+    'name': 'reflay: MS EDGE v13.10586 on Windows 10',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER
-  }
+    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'platform': 'Windows 10',
+    'browserName': 'MicrosoftEdge',
+    'version': '13.10586',
+    'recordVideo': false
+  }, {
+    'name': 'reflay: Safari v10.0 on OS X 10.11',
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'platform': 'OS X 10.11',
+    'browserName': 'safari',
+    'version': '10.0',
+    'recordVideo': false
+  }]
 }
 
 module.exports.config = exports.config = config

@@ -49,15 +49,13 @@ module.exports = function karmaConfig (config) {
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
       './node_modules/babel-polyfill/browser.js',
-      './tests.webpack.js',
-      './test/reactErrors.js' // ,
-      // './src/**/*.js'
+      './tests/unit/init.js',
+      './tests/unit/webpack.js'
     ],
     browsers: ['PhantomJS'],
     singleRun: true,
     preprocessors: {
-      'tests.webpack.js': ['webpack', 'sourcemap'] // ,
-      // 'src/**/*.js': ['coverage']
+      './tests/unit/webpack.js': ['webpack', 'sourcemap'] // ,
     },
     webpack: webpackConfig,
     webpackServer: {

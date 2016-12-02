@@ -3,7 +3,7 @@
 import expect from 'expect'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import Box from '../../src/components/Box'
+import Box from '../../../src/components/Box'
 
 const renderer = TestUtils.createRenderer()
 
@@ -40,7 +40,7 @@ describe('Box', () => {
     expect(className).toContain('flex-xl-10')
   })
 
-  it('Should add classes equals to props (flex-order breakpoints)', () => {
+  it('Should add classes equals to props (order breakpoints)', () => {
     renderer.render(<Box order={-20}
       order-xs={-16} order-gt-xs={-12}
       order-sm={-8} order-gt-sm={-4}
@@ -61,7 +61,7 @@ describe('Box', () => {
     expect(className).toContain('flex-order-xl-20')
   })
 
-  it('Should add classes equals to props (flex-offset breakpoints)', () => {
+  it('Should add classes equals to props (offset breakpoints)', () => {
     renderer.render(<Box offset={50}
       offset-xs={45} offset-gt-xs={40}
       offset-sm={35} offset-gt-sm={30}

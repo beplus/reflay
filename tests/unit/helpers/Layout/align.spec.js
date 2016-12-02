@@ -1,7 +1,7 @@
 /* global describe, it */
 
 import expect from 'expect'
-import { getLayoutAligns, getLayoutAlignClassName } from '../../../src/helpers/Layout/align'
+import { getLayoutAligns, getLayoutAlignClassName } from '../../../../src/helpers/Layout/align'
 
 describe('Layout helpers: align', () => {
   it('Should return all possible Layout align combinations', () => {

@@ -3,7 +3,7 @@
 import expect from 'expect'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import Layout from '../../src/components/Layout'
+import Layout from '../../../src/components/Layout'
 
 const renderer = TestUtils.createRenderer()
 
@@ -67,7 +67,7 @@ describe('Layout', () => {
     expect(renderer.getRenderOutput().props.className).toContain('layout-row')
   })
 
-  it('Should add "layout-align-*-stretch" class if `align` property for perpendicular is not set', () => {
+  it('Should add "layout-align-*-stretch" class if `align` property for perpendicular direction is not set', () => {
     renderer.render(<Layout align='start' />)
     expect(renderer.getRenderOutput().props.className).toContain('layout-align-start-stretch')
   })

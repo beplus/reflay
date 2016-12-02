@@ -3,6 +3,6 @@ node_js:
   - "node"
 script:
   - echo "UNIT TESTS - via karma - with code coverage"
-  - npm test
+  - npm test:unit
 after_success:
   - cat ./build/reports/coverage/**/lcov.info | ./node_modules/.bin/coveralls

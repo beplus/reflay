@@ -92,11 +92,11 @@ const getLayoutAlignClassNameSuffix = (align) => {
  */
 export const getLayoutAlignClassName = (props, breakpoint = '') => {
   if (breakpoint === '') {
-    return typeof props['align'] !== 'undefined'
+    return typeof props !== 'undefined' && typeof props['align'] !== 'undefined'
       ? `layout-align-${getLayoutAlignClassNameSuffix(props['align'])}`
       : ''
   } else {
-    return typeof props[`align-${breakpoint}`] !== 'undefined'
+    return typeof props !== 'undefined' && typeof props[`align-${breakpoint}`] !== 'undefined'
       ? `layout-align-${breakpoint}-${getLayoutAlignClassNameSuffix(props[`align-${breakpoint}`])}`
       : ''
   }

@@ -1,8 +1,19 @@
 language: node_js
 node_js:
   - "node"
+addons:
+  sauce_connect:
+    username: "beplus"
+  jwt:
+    secure: "CLi+eBCH4FyrjnReoUb3XFJm+5hwAQ/Ntp7q5NWd4KxqXeb0s7I9/eKi37OfwIRzexGbtRMC6160ePf97B6h+XCBayCdbxO4NlO9wJO65dUK139RXXfl3CRhOkx8aZ6GkdSKmIjVyHPEPTHJBTJPMSMF4qLwavVWgi+7/ICt8+znmhAL4rVF0R22jD/mmMfGtGb2IaQJZiTjIbgpybeVTMO/hkm/6CQ8j/faebkq88lh0JUtMEIdZRZGVUPFHZ1aeuvLaytfIMrRqlCOBhfEnZWuAday8gEjeMq5AWoi5tbHAlDchZ6J2avXjCtYsnQbNdewJTcn1XJVjdmNTjDvNQ/CrdRcy+vEoxa66+sBJpJxxogvqleQwXpwBZ4+sreEO7PzG8hXHcuz1Gxh+fD0DBl8b6sAP7+aYkBL+5AEgakZXrmNpPRzgjZY4gYBO0SCvFpz/IP4R5kXvlezdR5DrnMrKYDCL8GNu+INKnw1QtkCpTk73I6qQIskJzwaLK3FsSaOvTiacuRdaRqiXPtDfy9F8Om2bJVNyTdg++VbP+ZL5RsfbIJvHLF6+YkyWVeQTdCSiJlvOymXKxNzSvuZX0GrQcHgpUYA+qgQ5R7jwrNHeSlEc4BuA0sWqmZ1JPzxv68DpYgjseK4cUsHDNe/GFqHnbxtH0hA+wX4lqmuYGg="
+before_script:
+  - "npm run serve:travis > /dev/null &"
 script:
   - echo "UNIT TESTS - via karma - with code coverage"
-  - npm test:unit
+  - npm run test:karma
+  - echo "UNIT TESTS - via mocha"
+  - npm run test:mocha
+  - echo "E2E TESTS - via protractor / through SauceLabs"
+  - npm run test:e2e
 after_success:
   - cat ./build/reports/coverage/**/lcov.info | ./node_modules/.bin/coveralls

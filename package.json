@@ -5,20 +5,29 @@
   "homepage": "http://beplus.github.io/reflay",
   "main": "lib/index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm run compile",
-    "clean": "rimraf ./lib",
-    "compile": "./node_modules/.bin/babel -d ./lib ./src --copy-files",
-    "lint": "standard --verbose | snazzy",
-    "patch": "bumped release patch",
-    "prebuild": "npm run clean",
-    "prepublish": "npm run build",
-    "release": "bumped release",
-    "start": "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
-    "karma": "cross-env NODE_ENV=test karma start",
-    "karma:watch": "cross-env NODE_ENV=test karma start --no-single-run",
+    "postinstall": "npm run webdriver-manager-update",
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
+    "lint": "./node_modules/.bin/standard --verbose | snazzy",
+    "karma": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/karma start",
+    "karma:watch": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/karma start --no-single-run",
     "karma:coverage": "npm run karma -- --coverage",
-    "test": "npm run lint && npm run karma:coverage"
+    "mocha": "./node_modules/.bin/cross-env NODE_ENV=test mocha 'tests/unit/**/*.spec.js' --compilers js:babel-core/register --recursive --require ./tests/unit/setup.js --require ./tests/unit/init.js",
+    "mocha:watch": "npm run mocha -- --watch",
+    "test": "npm run lint && npm run test:unit && npm run test:e2e",
+    "test:unit": "npm run karma:coverage && npm run mocha",
+    "test:unit:nocoverage": "npm run karma && npm run mocha",
+    "test:e2e": "./node_modules/.bin/protractor protractor.config.js",
+    "prebuild": "npm run clean",
+    "build": "./node_modules/.bin/cross-env NODE_ENV=production npm run compile",
+    "build-travis": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/webpack --progress -p",
+    "clean": "./node_modules/.bin/rimraf ./lib",
+    "compile": "./node_modules/.bin/babel -d ./lib ./src --copy-files",
+    "webdriver-manager-update": "./node_modules/.bin/webdriver-manager update"
   },
+  "pre-commit": [
+    "lint",
+    "test:unit:nocoverage"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beplus/reflay.git"

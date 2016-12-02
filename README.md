@@ -17,7 +17,7 @@ Using `Layout` and `Box` components `props` as the API provides an easy way to s
 helps with **separation of concerns**: Attributes in form of React `props` define layout, while CSS classes assign 
 styling.
 
-- _TODO_ Homepage and Demo: [https://beplus.github.io/reflay](https://beplus.github.io/reflay)
+- Documentation and Demos: [https://beplus.github.io/reflay](https://beplus.github.io/reflay)
 - _TODO_ Example usage: [https://github.com/beplus/reflay-example](https://github.com/beplus/reflay-example)
 
 ## Usage

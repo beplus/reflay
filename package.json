@@ -14,8 +14,10 @@
     "prepublish": "npm run build",
     "release": "bumped release",
     "start": "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
-    "test": "cross-env NODE_ENV=test karma start",
-    "test:watch": "cross-env NODE_ENV=test karma start --no-single-run"
+    "karma": "cross-env NODE_ENV=test karma start",
+    "karma:watch": "cross-env NODE_ENV=test karma start --no-single-run",
+    "karma:coverage": "npm run karma -- --coverage",
+    "test": "npm run lint && npm run karma:coverage"
   },
   "repository": {
     "type": "git",

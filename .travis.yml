@@ -2,5 +2,7 @@ language: node_js
 node_js:
   - "node"
 script:
-  - npm run lint
+  - echo "UNIT TESTS - via karma - with code coverage"
   - npm test
+after_success:
+  - cat ./build/reports/coverage/**/lcov.info | ./node_modules/.bin/coveralls

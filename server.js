@@ -2,7 +2,8 @@ const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
 const config = require('./webpack.config.development')
-const port = 8080
+
+const { PORT = 3000 } = process.env
 
 const app = express()
 const compiler = webpack(config)
@@ -20,13 +21,12 @@ app.get('*', (req, resp) => {
   resp.sendFile(path.join(__dirname, './spec/index.html'))
 })
 
-app.listen(port, '0.0.0.0', (err) => {
+app.listen(PORT, '0.0.0.0', (err) => {
   if (err) {
     console.log(err)
     return
   }
 
   console.log(path.join(__dirname, './spec/index.html'))
-
-  console.log('Listening at http://0.0.0.0:' + port)
+  console.log('Listening at http://0.0.0.0:' + PORT)
 })

@@ -58,8 +58,9 @@ if (process.env.TRAVIS) {
   config.sauceUser = process.env.SAUCE_USERNAME
   config.sauceKey = process.env.SAUCE_ACCESS_KEY
 
+  // You can configure platforms here: https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
   config.multiCapabilities = [{
-    'name': 'reflay: MS EDGE v13.10586 on Windows 10',
+    'name': `reflay #${process.env.TRAVIS_BUILD_NUMBER}: MS EDGE v13.10586 on Windows 10`,
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
     'platform': 'Windows 10',
@@ -67,7 +68,7 @@ if (process.env.TRAVIS) {
     'version': '13.10586',
     'recordVideo': false
   }, {
-    'name': 'reflay: Safari v10.0 on OS X 10.11',
+    'name': `reflay #${process.env.TRAVIS_BUILD_NUMBER}: Safari v10.0 on OS X 10.11`,
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
     'platform': 'OS X 10.11',

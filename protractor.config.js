@@ -15,7 +15,7 @@ var pkg = require('./package.json')
  *
  */
 var argv = require('minimist')(process.argv.slice(2))
-var PORT = argv.port || (pkg.config ? (pkg.config.port ? pkg.config.port : null) : null) || 8080
+var PORT = argv.port || (pkg.config ? (pkg.config.port ? pkg.config.port : null) : null) || 3000
 var BASE_URL = argv['base-url'] || 'http://localhost'
 console.log('[INFOS] Testing on ' + BASE_URL + ':' + PORT)
 

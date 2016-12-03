@@ -1,6 +1,6 @@
 {
   "name": "reflay",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "React Flexbox Layout.",
   "homepage": "http://beplus.github.io/reflay",
   "main": "lib/index.js",

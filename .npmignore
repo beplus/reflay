@@ -1,3 +1,15 @@
-.gitignore
-.travis.yml
 node_modules
+spec
+tests
+.babelrc
+.bithoundrc
+.editorconfig
+.gitignore
+.npmignore
+.npmrc
+.travis.yml
+karma.conf.js
+protractor.config.js
+server.js
+webpack.config.development.js
+webpack.config.test.js

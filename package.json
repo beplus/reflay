@@ -5,7 +5,6 @@
   "homepage": "http://beplus.github.io/reflay",
   "main": "lib/index.js",
   "scripts": {
-    "postinstall": "npm run webdriver-manager-update",
     "start": "./node_modules/.bin/cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
     "lint": "./node_modules/.bin/standard --verbose | snazzy",
     "test:karma": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/karma start",

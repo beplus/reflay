@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://beplus.github.io/reflay</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/introduction</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/installation</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/layout-component</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/box-component</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/alignment</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/responsive</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/extra</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/troubleshooting</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/code-snippets</loc>
+    </url>
+    <url>
+        <loc>https://beplus.github.io/reflay/playground</loc>
+    </url>
+</urlset>

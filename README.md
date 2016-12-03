@@ -41,7 +41,7 @@ npm install --save reflay
 Once you have the WebPack workflow ready, you can just require and use the components:
 ```js
 import React from 'react'
-import { Layout, Box } from 'reflay/lib'
+import { Layout, Box } from 'reflay'
  
 import 'reflay/lib/styles/layout.scss' 
  

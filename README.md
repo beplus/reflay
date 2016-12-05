@@ -106,10 +106,10 @@ elements within the container.
 | `xl`       | '(min-width: **1920**px)'                             | _extra large_              |
 
 resulting in the following `props` _(just a few examples)_:
-- `direction-xs="row"` - specify `row` direction for `xs` viewport.
-- `direction-gt-xs="column"` - specify `column` direction for `gt-xs` viewport.
-- `align-sm="start start"` - `start start` align type for `sm` viewport.
-- `align-gt-sm="start end"` - `start end` align type for `gt-sm` viewport.
+- `direction-xs='row'` - specify `row` direction for `xs` viewport.
+- `direction-gt-xs='column'` - specify `column` direction for `gt-xs` viewport.
+- `align-sm='start start'` - `start start` align type for `sm` viewport.
+- `align-gt-sm='start end'` - `start end` align type for `gt-sm` viewport.
 - `flex-md={50}` - 50 % size of the parent container for `md` viewport. 
 - `flex-gt-md={75}` - 75 % size of the parent container for `gt-md` viewport.
 - `order-lg={1}` - specify `order` value of `1` for `lg` viewport.
@@ -133,7 +133,7 @@ import 'reflay/lib/styles/layout.scss'
 // 4 boxes stretched in width apper below each other on devices with viewport of `959px` max.
  
 const ResponsiveComponent = () => (
-  <Layout direction="column" direction-gt-sm="row" align="start stretch" align-gt-sm="center start">
+  <Layout direction='column' direction-gt-sm='row' align='start stretch' align-gt-sm='center start'>
     <Box flex={100} flex-gt-sm={33} order={1}>
       Box #1 - still visible
     </Box>

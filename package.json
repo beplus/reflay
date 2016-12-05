@@ -2,7 +2,7 @@
   "name": "reflay",
   "version": "1.0.1",
   "description": "React Flexbox Layout.",
-  "homepage": "http://beplus.github.io/reflay",
+  "homepage": "https://beplus.github.io/reflay",
   "main": "lib/index.js",
   "scripts": {
     "start": "./node_modules/.bin/cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",

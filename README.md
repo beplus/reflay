@@ -156,6 +156,8 @@ export default ResponsiveComponent
 - [Igor Lamoš](https://github.com/igorlamos)
 
 ## License
-[MIT](http://doge.mit-license.org) © 2016 BePlus s.r.o.
+Copyright © 2016 BePlus s.r.o.
+
+Licensed under the [MIT License](http://doge.mit-license.org). 
 
 Give us a **star** if `reflay` provides you some value.

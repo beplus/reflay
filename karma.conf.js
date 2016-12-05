@@ -26,7 +26,7 @@ const reporters = ['mocha']
 // default coverage reporter (we may want different reporters between local & CI)
 let coverageReporter = {
   reporters: [
-    {type: 'lcov', dir: './build/reports/coverage'}
+    {type: 'lcov', dir: './coverage'}
   ]
 }
 
@@ -39,7 +39,7 @@ if (COVERAGE && TRAVIS) {
   log.info('karma', 'TRAVIS mode - will send coverage reports to coveralls.io')
   reporters.push('coveralls')
   plugins.push('karma-coveralls')
-  coverageReporter = { type: 'lcovonly', dir: './build/reports/coverage' }
+  coverageReporter = { type: 'lcovonly', dir: './coverage' }
 }
 
 module.exports = function karmaConfig (config) {

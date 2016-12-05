@@ -16,4 +16,4 @@ script:
   - echo "E2E TESTS - via protractor / through SauceLabs"
   - npm run test:e2e
 after_success:
-  - cat ./build/reports/coverage/**/lcov.info | ./node_modules/.bin/coveralls
+  - cat ./coverage/**/lcov.info | ./node_modules/.bin/coveralls

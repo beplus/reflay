@@ -4,6 +4,12 @@
   "description": "React Flexbox Layout.",
   "homepage": "https://beplus.github.io/reflay",
   "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
   "scripts": {
     "start": "./node_modules/.bin/cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
     "lint": "./node_modules/.bin/standard --verbose | snazzy",

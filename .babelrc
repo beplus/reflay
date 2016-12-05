@@ -3,6 +3,16 @@
   "env": {
     "test": {
       "plugins": [ [ "__coverage__", { "ignore": "test/**/*.js" } ] ]
+    },
+    "commonjs": {
+      "plugins": [
+        ["transform-es2015-modules-commonjs", { "loose": true }]
+      ]
+    },
+    "es": {
+      "plugins": [
+        "./build/use-lodash-es"
+      ]
     }
   }
 }
